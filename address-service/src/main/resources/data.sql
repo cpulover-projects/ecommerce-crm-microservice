@@ -1,0 +1,1 @@
+INSERT INTO address(id, customer_id, street_number, street_name, city, country) VALUES (1, 1, 23, 'Street', 'City1', 'Country1'), (2, 2, 12, 'Street2', 'City2', 'Country2'), (3, 3, 45, 'Street3', 'City3', 'Country3');
