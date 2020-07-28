@@ -1,6 +1,12 @@
 # E-commerce CRM Microservices
 
+### Port
+- Customer service: 8000
+- Address service: 8100
+- Order service: 8200
+- Discovery service: 8761
 
+### Notes
 - [Feign] To map/retrieve the returned JSON response when invoking API from other Microservices:
   - Add desired fields mapping to JSON properties in the main entity of the Microservice
   - Add entity with attributes mapping to desired JSON properties

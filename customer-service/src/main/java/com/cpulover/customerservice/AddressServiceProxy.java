@@ -11,9 +11,6 @@ import lombok.Data;
 @FeignClient(name = "address-service")
 public interface AddressServiceProxy {
 
-//	@GetMapping("addresses/customerId/{id}")
-//	public Address getAddressByCustomerId(@PathVariable long id);
-	
 	@GetMapping("addresses/customerId/{id}/port")
 	public AddressResponse getAddressWithPortByCustomerId(@PathVariable long id);
 }

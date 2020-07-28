@@ -1,4 +1,4 @@
-package com.cpulover.customerservice;
+package com.cpulover.customerservice.achieved;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -9,7 +9,7 @@ private Address address;
 
 @Data class Address {
 	
-	private long id;
+	//private long id;
 	private long customerId;
 	private int streetNumber;
 	private String streetName;
