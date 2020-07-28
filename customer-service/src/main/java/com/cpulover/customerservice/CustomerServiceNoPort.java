@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/customers")
-public class CustomerService {
+public class CustomerServiceNoPort {
 
 	@Autowired
 	private CustomerRepository customerRepository;
@@ -26,23 +26,8 @@ public class CustomerService {
 		return customerRepository.findAll();
 	}
 	
-	
 	@GetMapping("{id}/address")
-	public AddressResponse getAddressWithPortByCustomerId(@PathVariable long id) {
-		return addressServiceProxy.getAddressWithPortByCustomerId(id);
+	public Address getAddressByCustomerId(@PathVariable long id) {
+		return addressServiceProxy.getAddressByCustomerId(id);
 	}
-	
-	
-	
-	
-	@Autowired
-	private DiscoveryClient discoveryClient;
-
-	@RequestMapping("/service-instances/{applicationName}")
-	public List<ServiceInstance> serviceInstancesByApplicationName(
-			@PathVariable String applicationName) {
-		return this.discoveryClient.getInstances(applicationName);
-	}
-	
-	
 }

@@ -9,7 +9,7 @@ import com.cpulover.customerservice.AddressResponse.Address;
 import lombok.Data;
 
 @FeignClient(name = "address-service")
-public interface AddressServiceProxy {
+public interface AddressServiceProxyNoPort {
 
 //	@GetMapping("addresses/customerId/{id}")
 //	public Address getAddressByCustomerId(@PathVariable long id);
