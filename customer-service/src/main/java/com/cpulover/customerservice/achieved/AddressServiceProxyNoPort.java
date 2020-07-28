@@ -12,6 +12,5 @@ public interface AddressServiceProxyNoPort {
 //	@GetMapping("addresses/customerId/{id}")
 //	public Address getAddressByCustomerId(@PathVariable long id);
 	
-	@GetMapping("addresses/customerId/{id}/port")
-	public AddressResponse getAddressWithPortByCustomerId(@PathVariable long id);
+	
 }

@@ -14,8 +14,6 @@ public class OrderService {
 	@Autowired
 	OrderRepository orderRepository;
 	
-	
-
 	@GetMapping
 	public List<Order> getOrders(){
 		return orderRepository.findAll();

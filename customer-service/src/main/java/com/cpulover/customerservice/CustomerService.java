@@ -14,12 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/customers")
 public class CustomerService {
-
 	@Autowired
 	private CustomerRepository customerRepository;
 	
 	@Autowired
 	private AddressServiceProxy addressServiceProxy;
+	
+	@Autowired
+	private OrderServiceProxy orderServiceProxy;
 
 	@GetMapping
 	public List<Customer> getCustomers() {
@@ -32,9 +34,14 @@ public class CustomerService {
 		return addressServiceProxy.getAddressWithPortByCustomerId(id);
 	}
 	
+	@GetMapping("{id}/orders")
+	public List<Order> getOrdersByCustomerId(@PathVariable long id){
+		return orderServiceProxy.getOrdersByCustomerId(id);
+	}
 	
 	
 	
+	//????
 	@Autowired
 	private DiscoveryClient discoveryClient;
 
