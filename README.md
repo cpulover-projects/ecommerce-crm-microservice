@@ -1,10 +1,11 @@
 # E-commerce CRM Microservices
 
-### Port
-- Customer service: 8000
-- Address service: 8100
-- Order service: 8200
-- Discovery service: 8761
+### Ports - URLs
+- Customer service: ```http://localhost:8000```
+- Address service: ```http://localhost:8100```
+- Order service: ```http://localhost:8200```
+- Discovery service: ```http://localhost:8761```
+- Zipkin UI server: ```http://localhost:9411/zipkin```
 
 ### Notes
 - [Feign] To map/retrieve the returned JSON response when invoking API from other Microservices:
@@ -15,7 +16,6 @@
 [[ResponseWrapper]()]
 
 ### Sleuth
-- Use SLF4J log to log requests with unique request and span id 
+- Use SLF4J or Logback to log requests with unique request id and span id 
 [[CustomerService]()]
-- Log more detail of the invoked requests by configure ```logging.level.org.springframework.web.servlet.DispatcherServlet=DEBUG
-```
+- Log more detail of the invoked requests by configure ```logging.level.org.springframework.web.servlet.DispatcherServlet=DEBUG```
